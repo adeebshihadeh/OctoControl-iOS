@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0546251A85B00100D45925 /* OctoPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0546241A85B00100D45925 /* OctoPrint.swift */; };
+		BE0CB9941A85BD510080A8A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CB9931A85BD510080A8A8 /* SettingsViewController.swift */; };
+		BE0CB9961A85BD6D0080A8A8 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CB9951A85BD6D0080A8A8 /* StateViewController.swift */; };
 		BE3FA61E1A859518005DBE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA61D1A859518005DBE9D /* AppDelegate.swift */; };
 		BE3FA6201A859518005DBE9D /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA61F1A859518005DBE9D /* ControlViewController.swift */; };
 		BE3FA6221A859518005DBE9D /* TerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA6211A859518005DBE9D /* TerminalViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE0546241A85B00100D45925 /* OctoPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoPrint.swift; sourceTree = "<group>"; };
+		BE0CB9931A85BD510080A8A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BE0CB9951A85BD6D0080A8A8 /* StateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		BE3FA6181A859518005DBE9D /* OctoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3FA61C1A859518005DBE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3FA61D1A859518005DBE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 				BE3FA61D1A859518005DBE9D /* AppDelegate.swift */,
 				BE3FA61F1A859518005DBE9D /* ControlViewController.swift */,
 				BE3FA6211A859518005DBE9D /* TerminalViewController.swift */,
+				BE0CB9951A85BD6D0080A8A8 /* StateViewController.swift */,
+				BE0CB9931A85BD510080A8A8 /* SettingsViewController.swift */,
+				BE0546241A85B00100D45925 /* OctoPrint.swift */,
 				BE3FA6231A859518005DBE9D /* iPhone.storyboard */,
 				BE3FA6261A859518005DBE9D /* Images.xcassets */,
 				BE3FA6281A859518005DBE9D /* LaunchScreen.xib */,
@@ -215,8 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0CB9961A85BD6D0080A8A8 /* StateViewController.swift in Sources */,
 				BE3FA6221A859518005DBE9D /* TerminalViewController.swift in Sources */,
+				BE0546251A85B00100D45925 /* OctoPrint.swift in Sources */,
 				BE3FA61E1A859518005DBE9D /* AppDelegate.swift in Sources */,
+				BE0CB9941A85BD510080A8A8 /* SettingsViewController.swift in Sources */,
 				BE3FA6201A859518005DBE9D /* ControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = OctoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = OctoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
