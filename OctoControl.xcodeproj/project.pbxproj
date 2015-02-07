@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BE3FA61E1A859518005DBE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA61D1A859518005DBE9D /* AppDelegate.swift */; };
-		BE3FA6201A859518005DBE9D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA61F1A859518005DBE9D /* FirstViewController.swift */; };
-		BE3FA6221A859518005DBE9D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA6211A859518005DBE9D /* SecondViewController.swift */; };
-		BE3FA6251A859518005DBE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA6231A859518005DBE9D /* Main.storyboard */; };
+		BE3FA6201A859518005DBE9D /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA61F1A859518005DBE9D /* ControlViewController.swift */; };
+		BE3FA6221A859518005DBE9D /* TerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA6211A859518005DBE9D /* TerminalViewController.swift */; };
+		BE3FA6251A859518005DBE9D /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA6231A859518005DBE9D /* iPhone.storyboard */; };
 		BE3FA6271A859518005DBE9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA6261A859518005DBE9D /* Images.xcassets */; };
 		BE3FA62A1A859518005DBE9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA6281A859518005DBE9D /* LaunchScreen.xib */; };
 		BE3FA6361A859518005DBE9D /* OctoControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA6351A859518005DBE9D /* OctoControlTests.swift */; };
@@ -30,9 +30,9 @@
 		BE3FA6181A859518005DBE9D /* OctoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3FA61C1A859518005DBE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3FA61D1A859518005DBE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE3FA61F1A859518005DBE9D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BE3FA6211A859518005DBE9D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		BE3FA6241A859518005DBE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE3FA61F1A859518005DBE9D /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		BE3FA6211A859518005DBE9D /* TerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewController.swift; sourceTree = "<group>"; };
+		BE3FA6241A859518005DBE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		BE3FA6261A859518005DBE9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE3FA6291A859518005DBE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BE3FA62F1A859518005DBE9D /* OctoControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctoControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				BE3FA61D1A859518005DBE9D /* AppDelegate.swift */,
-				BE3FA61F1A859518005DBE9D /* FirstViewController.swift */,
-				BE3FA6211A859518005DBE9D /* SecondViewController.swift */,
-				BE3FA6231A859518005DBE9D /* Main.storyboard */,
+				BE3FA61F1A859518005DBE9D /* ControlViewController.swift */,
+				BE3FA6211A859518005DBE9D /* TerminalViewController.swift */,
+				BE3FA6231A859518005DBE9D /* iPhone.storyboard */,
 				BE3FA6261A859518005DBE9D /* Images.xcassets */,
 				BE3FA6281A859518005DBE9D /* LaunchScreen.xib */,
 				BE3FA61B1A859518005DBE9D /* Supporting Files */,
@@ -195,7 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3FA6251A859518005DBE9D /* Main.storyboard in Resources */,
+				BE3FA6251A859518005DBE9D /* iPhone.storyboard in Resources */,
 				BE3FA62A1A859518005DBE9D /* LaunchScreen.xib in Resources */,
 				BE3FA6271A859518005DBE9D /* Images.xcassets in Resources */,
 			);
@@ -215,9 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3FA6221A859518005DBE9D /* SecondViewController.swift in Sources */,
+				BE3FA6221A859518005DBE9D /* TerminalViewController.swift in Sources */,
 				BE3FA61E1A859518005DBE9D /* AppDelegate.swift in Sources */,
-				BE3FA6201A859518005DBE9D /* FirstViewController.swift in Sources */,
+				BE3FA6201A859518005DBE9D /* ControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,12 +240,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE3FA6231A859518005DBE9D /* Main.storyboard */ = {
+		BE3FA6231A859518005DBE9D /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE3FA6241A859518005DBE9D /* Base */,
 			);
-			name = Main.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		BE3FA6281A859518005DBE9D /* LaunchScreen.xib */ = {
@@ -345,6 +345,7 @@
 				INFOPLIST_FILE = OctoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +356,7 @@
 				INFOPLIST_FILE = OctoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +413,7 @@
 				BE3FA63B1A859518005DBE9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE3FA63C1A859518005DBE9D /* Build configuration list for PBXNativeTarget "OctoControlTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +422,7 @@
 				BE3FA63E1A859518005DBE9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
