@@ -7,7 +7,7 @@
         <!--Control-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="OctoControl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ControlViewController" customModule="OctoControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="glN-qz-Mcg">
-                                <rect key="frame" x="16" y="418" width="144" height="29"/>
+                                <rect key="frame" x="16" y="418" width="166" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="0.1"/>
@@ -59,6 +59,9 @@
                                     <segment title="10"/>
                                     <segment title="100"/>
                                 </segments>
+                                <connections>
+                                    <action selector="incrementChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="hTt-Pa-SBf"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zag-zQ-Pht">
                                 <rect key="frame" x="16" y="108" width="53" height="30"/>
@@ -87,6 +90,9 @@
                                 <state key="normal" title="→">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogXRight:" destination="9pv-A4-QxB" eventType="touchUpInside" id="i1E-fF-7Xe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0wY-7y-Z0d">
                                 <rect key="frame" x="83" y="274" width="45" height="45"/>
@@ -106,6 +112,9 @@
                                 <state key="normal" title="←">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogXLeft:" destination="9pv-A4-QxB" eventType="touchUpInside" id="O7j-ZL-OZT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9bw-6O-3MK">
                                 <rect key="frame" x="83" y="221" width="45" height="45"/>
@@ -114,6 +123,9 @@
                                 <state key="normal" title="↑">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogYUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rep-k3-RKV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="adA-i1-9Yg">
                                 <rect key="frame" x="83" y="327" width="45" height="45"/>
@@ -122,6 +134,9 @@
                                 <state key="normal" title="↓">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogYDown:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ypu-o2-tlW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1gt-ld-FsV">
                                 <rect key="frame" x="229" y="274" width="45" height="45"/>
@@ -141,6 +156,9 @@
                                 <state key="normal" title="↑">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogZUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="llC-Ho-q4D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MCO-gG-dz5">
                                 <rect key="frame" x="229" y="327" width="45" height="45"/>
@@ -149,6 +167,9 @@
                                 <state key="normal" title="↓">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="jogZDown:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gRV-AP-mvc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X/Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zqx-kB-wUc">
                                 <rect key="frame" x="87" y="192" width="37" height="21"/>
@@ -294,7 +315,7 @@
         <!--Terminal-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="OctoControl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="TerminalViewController" customModule="OctoControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,14 +329,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WZq-ZP-nRd">
-                                <rect key="frame" x="263" y="70" width="36" height="30"/>
+                                <rect key="frame" x="240" y="70" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendCommand:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wfL-Dy-JPn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="bob-yS-ZdD">
-                                <rect key="frame" x="16" y="70" width="239" height="30"/>
+                                <rect key="frame" x="16" y="70" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -332,6 +359,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Terminal" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="commandField" destination="bob-yS-ZdD" id="QEC-f1-SJI"/>
+                        <outlet property="terminalOutput" destination="ugl-bM-gbG" id="NPt-Ki-fgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

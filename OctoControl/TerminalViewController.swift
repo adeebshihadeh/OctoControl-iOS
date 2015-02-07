@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TerminalViewController.swift
 //  OctoControl
 //
 //  Created by quillford on 2/6/15.
@@ -8,11 +8,18 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TerminalViewController: UIViewController {
 
+    @IBOutlet weak var commandField: UITextField!
+    @IBOutlet weak var terminalOutput: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let url = "http://" + userDefaults.stringForKey("ip")! + "/"
+        
+        OctoPrint.getTerminalOutput(String(url))
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,14 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func sendCommand(sender: AnyObject) {
+        let ip = userDefaults.stringForKey("ip")
+        let apikey = userDefaults.stringForKey("apikey")
+        
+        OctoPrint.sendGcode(commandField.text, ip: ip!, apikey: apikey!)
+        
+        //dismiss keyboard
+        self.view.endEditing(true)
+    }
 }
 
