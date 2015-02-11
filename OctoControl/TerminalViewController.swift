@@ -18,7 +18,6 @@ class TerminalViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //OctoPrint.getTerminalOutput()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +35,8 @@ class TerminalViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
 }
 

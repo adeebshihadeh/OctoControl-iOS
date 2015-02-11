@@ -140,10 +140,16 @@ class ControlViewController: UIViewController {
     @IBAction func extrude(sender: AnyObject) {
         var extrudeLength = filamentLength.text
         OctoPrint.sendGcode("G1 E \(extrudeLength)", ip: ip!, apikey: apikey!)
+        self.view.endEditing(true)
     }
     
     @IBAction func retract(sender: AnyObject) {
         var retractLength = filamentLength.text
         OctoPrint.sendGcode("G1 E -\(retractLength)", ip: ip!, apikey: apikey!)
+        self.view.endEditing(true)
+    }
+    
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
 }
