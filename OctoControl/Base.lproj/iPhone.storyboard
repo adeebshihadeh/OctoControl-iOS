@@ -279,7 +279,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Control" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Control" image="Control" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="bedLabel" destination="uD6-VC-GWw" id="GRU-ss-fUS"/>
                         <outlet property="bedSlider" destination="LWR-nW-Mve" id="U6F-TF-vbW"/>
@@ -358,7 +358,7 @@ Printed: -</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="State" id="ef1-mU-0ev"/>
+                    <tabBarItem key="tabBarItem" title="State" image="State" id="ef1-mU-0ev"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3S-Qn-qai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,7 +426,7 @@ Printed: -</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="EVp-dL-Ibu"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="EVp-dL-Ibu"/>
                     <connections>
                         <outlet property="apikeyField" destination="jNH-wn-OGJ" id="a7G-vt-cRk"/>
                         <outlet property="ipField" destination="8ih-4d-QkM" id="LO1-1g-z09"/>
@@ -481,7 +481,7 @@ Printed: -</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Terminal" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Terminal" image="Terminal" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="commandField" destination="bob-yS-ZdD" id="QEC-f1-SJI"/>
                         <outlet property="terminalOutput" destination="ugl-bM-gbG" id="NPt-Ki-fgd"/>
@@ -514,8 +514,10 @@ Printed: -</string>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Control" width="21" height="21"/>
+        <image name="Settings" width="21" height="21"/>
+        <image name="State" width="21" height="21"/>
+        <image name="Terminal" width="21" height="21"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
