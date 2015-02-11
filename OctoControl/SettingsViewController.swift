@@ -43,4 +43,28 @@ class SettingsViewController: UIViewController {
         //dismiss the keyboard
         self.view.endEditing(true)
     }
+    
+    @IBAction func testConnection(sender: AnyObject) {
+        userDefaults.setObject(self.ipField.text, forKey: "ip")
+        userDefaults.setObject(self.apikeyField.text, forKey: "apikey")
+        
+        let ip = userDefaults.stringForKey("ip")
+        let apikey = userDefaults.stringForKey("apikey")
+        
+        let alert = UIAlertView()
+        alert.addButtonWithTitle("OK")
+        
+        if (OctoPrint.testConnection(ip!, apikey: apikey!)){
+            alert.title = "Connected!"
+            alert.message = "You have successfully connected to your OctoPrint server"
+        }else {
+            alert.title = "Not Connected"
+            alert.message = "OctoControl cannot connect to your OctoPrint server. Please check your settings."
+        }
+        alert.show()
+        
+        
+        self.view.endEditing(true)
+    }
+    
 }

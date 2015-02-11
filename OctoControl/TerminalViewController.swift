@@ -17,9 +17,8 @@ class TerminalViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let url = "http://" + userDefaults.stringForKey("ip")! + "/"
+        //OctoPrint.getTerminalOutput()
         
-        OctoPrint.getTerminalOutput(String(url))
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +35,7 @@ class TerminalViewController: UIViewController {
         //dismiss keyboard
         self.view.endEditing(true)
     }
+    
+    
 }
 

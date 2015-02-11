@@ -11,10 +11,20 @@ import UIKit
 class ControlViewController: UIViewController {
 
     @IBOutlet weak var increment: UISegmentedControl!
+    @IBOutlet weak var extruderOneSlider: UISlider!
+    @IBOutlet weak var bedSlider: UISlider!
+    @IBOutlet weak var extruderOneLabel: UILabel!
+    @IBOutlet weak var bedLabel: UILabel!
+    @IBOutlet weak var filamentLength: UITextField!
+    
+    @IBOutlet weak var extruderOneTempLabel: UILabel!
+    @IBOutlet weak var bedTempLabel: UILabel!
     
     var ip = userDefaults.stringForKey("ip")
     var apikey = userDefaults.stringForKey("apikey")
     var jogIncrement: Float = 0.1
+    var extruderOneTemp = 0
+    var bedTemp = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +46,10 @@ class ControlViewController: UIViewController {
                 default:
                     break;
             }
-    
+        extruderOneTempLabel.text = "Extruder 1: " + OctoPrint.getTemp()
+        
+        ip = userDefaults.stringForKey("ip")
+        apikey = userDefaults.stringForKey("apikey")
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +101,24 @@ class ControlViewController: UIViewController {
         OctoPrint.sendGcode("M18", ip: ip!, apikey: apikey!)
     }
     
+    @IBAction func extruderOneChange(sender: AnyObject) {
+        extruderOneTemp = Int(extruderOneSlider.value)
+        extruderOneLabel.text = String(extruderOneTemp)
+    }
+   
+    @IBAction func bedTempChange(sender: AnyObject) {
+        bedTemp = Int(bedSlider.value)
+        bedLabel.text = String(bedTemp)
+    }
+    
+    @IBAction func setTempExtruderOne(sender: AnyObject) {
+        OctoPrint.sendGcode("M104 S\(extruderOneTemp)", ip: ip!, apikey: apikey!)
+    }
+    
+    @IBAction func setTempBed(sender: AnyObject) {
+        OctoPrint.sendGcode("M140 S\(bedTemp)", ip: ip!, apikey: apikey!)
+    }
+    
     @IBAction func incrementChange(sender: AnyObject) {
         switch(increment.selectedSegmentIndex){
             case 0:
@@ -106,5 +137,13 @@ class ControlViewController: UIViewController {
                 break;
             }
         }
+    @IBAction func extrude(sender: AnyObject) {
+        var extrudeLength = filamentLength.text
+        OctoPrint.sendGcode("G1 E \(extrudeLength)", ip: ip!, apikey: apikey!)
+    }
+    
+    @IBAction func retract(sender: AnyObject) {
+        var retractLength = filamentLength.text
+        OctoPrint.sendGcode("G1 E -\(retractLength)", ip: ip!, apikey: apikey!)
+    }
 }
-
