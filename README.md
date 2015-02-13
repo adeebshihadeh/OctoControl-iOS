@@ -26,6 +26,8 @@ Screenshots: http://imgur.com/3P58b1y,MCHFypP,rUx8LrZ,qObfowO
 -Today View widget for print status
 -Print status notifications
 
+# Credit
+[Starscream](https://github.com/daltoniam/starscream) used for Websockets
+
 # Compatability
-iOS 7+
-Written for iOS 8.1
+iOS 8+
