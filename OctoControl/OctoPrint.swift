@@ -10,7 +10,7 @@ import Foundation
 
 var userDefaults = NSUserDefaults.standardUserDefaults()
 
-class OctoPrint {
+class OctoPrint{
     
     class func sendGcode(command:String, ip:String, apikey:String){
         var request = NSMutableURLRequest(URL: NSURL(string: "http://\(ip)/api/printer/command")!)
@@ -64,7 +64,7 @@ class OctoPrint {
         if let error = error {
             println("Error : \(error)")
         } else {
-            println("HTML : \(outputHtml)")
+            //println("HTML : \(outputHtml)")
             println("it works")
         }
         
@@ -80,22 +80,6 @@ class OctoPrint {
             println("found: \(result)")
         }
         return result
-    }
-    
-    class func getTerminalOutput() -> String {
-        let ip = userDefaults.stringForKey("ip")
-        let apikey = userDefaults.stringForKey("apikey")
-        
-//        var socket = WebSocket(url: NSURL(scheme: "ws", host: "http://\(ip)", path: "/#term")!)
-//        //socket.delegate = self
-//        //socket.connect()
-//        
-//
-//        if socket.isConnected {
-//            println("success")
-//        }
-        
-        return "terminal output"
     }
     
     class func getTemp() -> String{

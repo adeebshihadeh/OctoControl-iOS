@@ -10,6 +10,8 @@
 	<string>OctoControl</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</key>
+		<string>https://github.com/brynbellomy/Starscream.git</string>
 		<key>F57665F4A75CD0974BFFA55BAA2E026CEB519336</key>
 		<string>https://github.com/quillford/OctoControl.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>OctoControl.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</key>
+		<string>../../Starscream</string>
 		<key>F57665F4A75CD0974BFFA55BAA2E026CEB519336</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>F57665F4A75CD0974BFFA55BAA2E026CEB519336</string>
 			<key>IDESourceControlWCCName</key>
 			<string>OctoControl</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Starscream</string>
 		</dict>
 	</array>
 </dict>

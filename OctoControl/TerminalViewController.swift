@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import Starscream
 
-class TerminalViewController: UIViewController {
+class TerminalViewController: UIViewController, WebSocketDelegate {
+    
+    var socket = WebSocket(url: NSURL(scheme: "ws", host: "prusa.local", path: "/sockjs/websocket")!)
+    
+    let ip = userDefaults.stringForKey("ip")
+    let apikey = userDefaults.stringForKey("apikey")
 
     @IBOutlet weak var commandField: UITextField!
     @IBOutlet weak var terminalOutput: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        //OctoPrint.getTerminalOutput()
+        socket.delegate = self
+        socket.connect()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,17 +32,36 @@ class TerminalViewController: UIViewController {
     }
 
     @IBAction func sendCommand(sender: AnyObject) {
-        let ip = userDefaults.stringForKey("ip")
-        let apikey = userDefaults.stringForKey("apikey")
-        
         OctoPrint.sendGcode(commandField.text, ip: ip!, apikey: apikey!)
         
         //dismiss keyboard
         self.view.endEditing(true)
     }
     
+    func updateTerminal(){
+        //get terminal output from websocket data
+    }
+    
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent) {
         self.view.endEditing(true)
+    }
+    
+    func websocketDidConnect(ws: WebSocket) {
+        println("websocket is connected")
+    }
+    
+    func websocketDidDisconnect(ws: WebSocket, error: NSError?) {
+        if let e = error {
+            println("websocket is disconnected: \(e.localizedDescription)")
+        }
+    }
+    
+    func websocketDidReceiveMessage(ws: WebSocket, text: String) {
+        println("Received text: \(text)")
+    }
+    
+    func websocketDidReceiveData(ws: WebSocket, data: NSData) {
+        println("Received data: \(data.length)")
     }
 }
 
