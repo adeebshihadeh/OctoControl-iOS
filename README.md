@@ -1,7 +1,7 @@
 # OctoControl
 an iOS app for controlling your OctoPrint powered 3D printer
 
-Screenshots: http://imgur.com/3P58b1y,MCHFypP,rUx8LrZ,qObfowO
+Screenshots: http://imgur.com/a/ZdYoU
 
 # Working
 -Basic controls: XYZ movement
