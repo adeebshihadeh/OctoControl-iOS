@@ -17,7 +17,7 @@ Screenshots: http://imgur.com/a/ZdYoU
 -Printer state
 -Print, Pause, and Cancel
 
-# Features to come
+# Features to come (maybe)
 -Webcam monitoring
 -iPad UI
 -Voice control
